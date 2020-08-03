@@ -19,6 +19,7 @@ function customapi_welcome() {
   while($mypost->have_posts()) {
     $mypost->the_post();
     array_push($results, array(
+        'id'=>get_the_id(),
       'title' => get_the_title(),
       'permalink' => get_the_permalink(),
       'content'=> get_the_content()
